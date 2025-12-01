@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мир кино - Новости</title>
+    <link rel="icon" href="D:/1920x (1).png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+        }
+        
+        .news-card {
+            background: #1a1a2e;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .news-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+        }
+        
+        .news-img {
+            height: 200px;
+            overflow: hidden;
+        }
+        
+        .news-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+        
+        .news-card:hover .news-img img {
+            transform: scale(1.1);
+        }
+        
+        .news-info {
+            padding: 20px;
+        }
+        
+        .news-info h3 {
+            margin-bottom: 10px;
+        }
+        
+        .news-info p {
+            color: #aaa;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">
+                    <i class="fas fa-film"></i>Мир Кино
+                </a>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="movies.html">Фильмы</a></li>
+                        <li><a href="about.html">О проекте</a></li>
+                        <li><a href="news.html" class="active">Новости</a></li>
+                        <li><a href="contact.html">Контакты</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- News Section -->
+    <section>
+        <div class="container">
+            <div class="section-title">
+                <h2>Новости кино</h2>
+            </div>
+            <div class="news-grid">
+                <!-- Новости из вашего кода -->
+                <div class="news-card">
+                    <div class="news-img">
+                        <img src="https://avatars.mds.yandex.net/i?id=22e2a2cf55f231abc58bf64d359ac80993869dbb-4936359-images-thumbs&n=13" alt="Новый фильм Кристофера Нолана">
+                    </div>
+                    <div class="news-info">
+                        <h3>Новый фильм Кристофера Нолана выходит в октябре</h3>
+                        <p>Известный режиссер анонсировал свою новую работу в жанре фэнтези с впечатляющим актерским составом.</p>
+                        <a href="#" class="btn">Читать далее</a>
+                    </div>
+                </div>
+                
+                <!-- Добавьте остальные новости -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">Мир Кино</div>
+                <ul class="footer-links">
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="movies.html">Фильмы</a></li>
+                    <li><a href="about.html">О проекте</a></li>
+                    <li><a href="news.html">Новости</a></li>
+                    <li><a href="contact.html">Контакты</a></li>
+                </ul>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Мир Кино. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

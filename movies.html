@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мир кино - Фильмы</title>
+    <link rel="icon" href="D:/1920x (1).png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .movies-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 30px;
+        }
+        
+        .movie-card {
+            background: #1a1a2e;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .movie-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+        }
+        
+        .movie-img {
+            height: 380px;
+            overflow: hidden;
+        }
+        
+        .movie-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+        
+        .movie-card:hover .movie-img img {
+            transform: scale(1.1);
+        }
+        
+        .movie-info {
+            padding: 20px;
+        }
+        
+        .movie-info h3 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+        }
+        
+        .movie-info p {
+            color: #aaa;
+            margin-bottom: 15px;
+            font-size: 0.9rem;
+        }
+        
+        .rating {
+            display: flex;
+            align-items: center;
+            color: #ffc107;
+        }
+        
+        .rating i {
+            margin-right: 5px;
+        }
+        
+        .genres {
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 15px;
+        }
+        
+        .genre {
+            background: #16213e;
+            color: #fff;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            margin-right: 8px;
+            margin-bottom: 8px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">
+                    <i class="fas fa-film"></i>Мир Кино
+                </a>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="movies.html" class="active">Фильмы</a></li>
+                        <li><a href="about.html">О проекте</a></li>
+                        <li><a href="news.html">Новости</a></li>
+                        <li><a href="contact.html">Контакты</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Movies Section -->
+    <section>
+        <div class="container">
+            <div class="section-title">
+                <h2>Популярные кинокартины</h2>
+            </div>
+            <div class="movies-grid">
+                <!-- Фильмы из вашего кода -->
+                <div class="movie-card">
+                    <div class="movie-img">
+                        <img src="http://images-s.kinorium.com/movie/poster/573759/w1500_41129997.jpg" alt="Бегущий по лезвию 2049">
+                    </div>
+                    <div class="movie-info">
+                        <h3>Бегущий по лезвию 2049</h3>
+                        <p>Фантастический боевик о будущем, где человекоподобные роботы сосуществуют с людьми.</p>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <span>8.0/10</span>
+                        </div>
+                        <div class="genres">
+                            <span class="genre">Фантастика</span>
+                            <span class="genre">Боевик</span>
+                            <span class="genre">Драма</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Добавьте остальные фильмы здесь -->
+                <!-- Фильм 2 -->
+                <div class="movie-card">
+                    <div class="movie-img">
+                        <img src="https://avatars.mds.yandex.net/get-kinopoisk-image/1599028/0fa5bf50-d5ad-446f-a599-b26d070c8b99/600x900" alt="Тёмный рыцарь">
+                    </div>
+                    <div class="movie-info">
+                        <h3>Трилогия о Тёмном рыцаре</h3>
+                        <p>Серия супергеройских боевиков с элементами неонуара.</p>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <span>8.9/10</span>
+                        </div>
+                        <div class="genres">
+                            <span class="genre">Драма</span>
+                            <span class="genre">Боевик</span>
+                            <span class="genre">Супергероика</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Продолжайте добавлять остальные фильмы -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">Мир Кино</div>
+                <ul class="footer-links">
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="movies.html">Фильмы</a></li>
+                    <li><a href="about.html">О проекте</a></li>
+                    <li><a href="news.html">Новости</a></li>
+                    <li><a href="contact.html">Контакты</a></li>
+                </ul>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Мир Кино. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
